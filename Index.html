@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RTUPlans</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>RTU Plani</h1>
+</div>
+
+<div class="tab">
+    <button class="tablinks" onclick="openFloor(event, '2 Stavs')"id="defaultOpen">2 Stavs</button>
+    <button class="tablinks" onclick="openFloor(event, '3 Stavs')">3 Stavs</button>
+    <button class="tablinks" onclick="openFloor(event, '4 Stavs')">4 Stavs</button>
+    <button class="tablinks" onclick="openFloor(event, '5 Stavs')">5 Stavs</button>
+</div>
+
+<div id="2 Stavs" class="tabcontent">
+    <h3>2 Staves plani</h3>
+    <li><a href="2stavs/254.jpg">254</a></li>
+    <li><a href="2stavs/256.jpg">256</a></li>
+</div>
+
+<div id="3 Stavs" class="tabcontent">
+    <h3>3 Staves plani</h3>
+    <li> <a href="3stavs/300.jpg">300</a></li>
+    <li><a href="3stavs/310.jpg">310</a></li>
+    <li><a href="3stavs/313.jpg">313</a></li>
+    <li><a href="3stavs/318.jpg">318</a></li>
+    <li><a href="3stavs/338.jpg">338</a></li>
+    <li><a href="3stavs/340.jpg">340</a></li>
+    <li><a href="3stavs/342.jpg">342</a></li>
+</div>
+
+<div id="4 Stavs" class="tabcontent">
+    <h3>4 Staves plani</h3>
+    <li> <a href="4stavs/400.jpg">400</a></li>
+    <li> <a href="4stavs/422.jpg">422</a></li>
+    <li> <a href="4stavs/428.jpg">428</a></li>
+</div>
+
+<div id="5 Stavs" class="tabcontent">
+    <h3>5 Staves plani</h3>
+    <li> <a href="5stavs/529.jpg">529</a></li>
+    <li> <a href="5stavs/538.jpg">538</a></li>
+    <li> <a href="5stavs/543.jpg">543</a></li>
+    <li> <a href="5stavs/548.jpg">548</a></li>
+</div>
+
+<script>
+    function openFloor(evt, FloorName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(FloorName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+</script>
+</body>
+</html>
